@@ -1,0 +1,13 @@
+Caracteristicas veridit · MD
+| Característica | Prioridade | Justificativa | Requisitos relacionados |
+|---|---|---|---|
+| Segurança | 1 | Único atributo de qualidade explícito no documento: apenas usuários cadastrados podem acessar o sistema. O sistema também lida com credenciais, pagamentos e registros usados como prova, que não podem ser acessados nem alterados por terceiros. | Atributo de Qualidade (Segurança), REQ01, REQ02, REQ03, REQ04, REQ06 |
+| Disponibilidade | 2 | O conteúdo a ser registrado está em sites que podem mudar ou sair do ar a qualquer momento. Se o Veridit estiver indisponível quando o usuário precisa capturar, a prova pode ser perdida. | REQ03, REQ05, REQ06, REQ08 |
+| Auditabilidade | 3 | O produto existe para gerar evidência. Cada registro precisa identificar quem o fez, quando começou e terminou e o que foi capturado, além de permitir comprovar que o conteúdo não foi alterado após a captura. | REQ12, REQ13, REQ14, REQ15, Apêndice A (Detalhes e Relatório do registro) |
+| Confiabilidade | 4 | Captura, pagamento e geração de relatório e zip precisam ser concluídos corretamente. Uma gravação interrompida ou um crédito debitado sem registro gera prejuízo direto e evidência incompleta. | REQ05, REQ06, REQ07, REQ09, REQ10, REQ11, REQ14, REQ15 |
+| Elasticidade | 5 | A demanda por capturas é irregular, com picos de gravações simultâneas. Gravar vídeo de navegação consome muito processamento, então o sistema precisa alocar e liberar recursos rapidamente conforme a carga. | REQ08, REQ09, REQ11 |
+| Escalabilidade | 6 | Com o crescimento da base de usuários e a inclusão de empresas (D1), aumentam o número de usuários, o volume de registros e o armazenamento de imagens e vídeos. O sistema deve suportar esse crescimento contínuo sem degradar. | REQ08, REQ12, REQ15, D1 |
+| Multilocação | 7 | O sistema atende diferentes tipos de cliente (advogados, usuários comuns e, futuramente, empresas). Cada um deve ver apenas os próprios registros e créditos, isolado dos demais na mesma infraestrutura. | REQ01, REQ12, REQ13, D1 |
+| Privacidade | 8 | O sistema armazena dados pessoais sensíveis (CPF, número da OAB, endereço, telefone) e precisa protegê-los conforme a LGPD, expondo-os apenas a quem tem direito. | REQ01, REQ05, REQ14, Apêndice A (Advogado, Usuário comum, Dados da compra) |
+| Interoperabilidade | 9 | O sistema depende de serviços externos: Mercado Pago, geração de Pix e envio de e-mails de confirmação. | REQ06, REQ07, REQ10, REQ11 |
+| Arquivabilidade | 10 | Os registros servem como prova em processos que podem durar anos, então precisam ser mantidos e recuperáveis por longo prazo, inclusive os arquivos capturados. | REQ12, REQ13, REQ14, REQ15 |
